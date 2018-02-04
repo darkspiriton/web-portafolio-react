@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
-import { Person } from './components/Person.js'
+import Person from './components/Person.js'
 import { Example } from './components/Example.js'
-// import { Name } from './components/Name'
 import Button from './components/Button'
 
 class App extends Component {
@@ -15,16 +14,24 @@ class App extends Component {
       { name: 'Luis3', age: 25 },
       { name: 'Luis4', age: 26 }
     ],
-    index: 0
+    index: ''
   }
 
-  deleteNameHandler = index => {
-    if (this.state.index) {
-      let index = this.state.index
+  deleteNameHandler = event => {
+    // console.log(event.target.value)
+    let index = parseInt(event.target.value, 10)
+    if (index <= this.state.persons.length - 1) {
+      this.setState({ index })
       let state = this.state.persons
       state.splice(index, 1)
       this.setState({ persons: state })
+    } else {
+      console.log('Error de value')
     }
+  }
+
+  deleteItemHandler = index => {
+    console.log(index)
   }
 
   indexChangeHadler = event => {
@@ -35,9 +42,12 @@ class App extends Component {
   restoreNameHandler = () => {
     this.setState({
       persons: [
-        { name: 'Cesar', age: 23 },
-        { name: 'Mari', age: 21 },
-        { name: 'Luis', age: 25 }
+        { name: 'Cesar', age: 21 },
+        { name: 'Mari', age: 22 },
+        { name: 'Luis1', age: 23 },
+        { name: 'Luis2', age: 24 },
+        { name: 'Luis3', age: 25 },
+        { name: 'Luis4', age: 26 }
       ]
     })
   }
@@ -48,12 +58,19 @@ class App extends Component {
         <Button
           restore={this.restoreNameHandler}
           delete={this.deleteNameHandler}
-          changed={this.indexChangeHadler}
+          changed={this.deleteNameHandler}
+          value={this.state.index}
         />
         <Example aux="male" />
         {this.state.persons.map((item, index) => {
           return (
-            <Person key={index} name={item.name} age={item.age} pos={index} />
+            <Person
+              key={index}
+              name={item.name}
+              age={item.age}
+              pos={index}
+              click={this.deleteItemHandler.bind(this, index)}
+            />
           )
         })}
       </div>
