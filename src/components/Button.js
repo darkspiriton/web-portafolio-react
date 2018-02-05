@@ -12,8 +12,16 @@ class NameUpdate extends Component {
     return (
       <div className="name-update">
         <div>
-          <button style={style} onClick={this.props.delete}> Delete Name </button>
-          <button style={style}onClick={this.props.restore}> Restore Names </button>
+          <button
+            style={style}
+            onClick={this.props.delete}>
+              Delete Name
+          </button>
+          <button
+            style={style}
+            onClick={this.props.restore}>
+              Restore Names
+          </button>
         </div>
         {/* <input type="text"  onChange={this.props.changed} /> */}
         <input

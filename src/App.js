@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import './App.css'
-import Person from './components/Person.js'
-import { Example } from './components/Example.js'
+import './css/App.css'
+import Person from './components/Person'
+import { Example } from './components/examples/Example'
 import Button from './components/Button'
 
 class App extends Component {
@@ -22,9 +22,9 @@ class App extends Component {
     let index = parseInt(event.target.value, 10)
     if (index <= this.state.persons.length - 1) {
       this.setState({ index })
-      let state = this.state.persons
-      state.splice(index, 1)
-      this.setState({ persons: state })
+      let persons = this.state.persons
+      persons.splice(index, 1)
+      this.setState({ persons })
     } else {
       console.log('Error de value')
     }
