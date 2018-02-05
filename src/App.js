@@ -32,8 +32,10 @@ class App extends Component {
     }
   }
 
-  deleteItemHandler = index => {
-    console.log(index)
+  deleteItemHandler = indexPerson => {
+    let persons = this.state.persons
+    persons.splice(indexPerson, 1)
+    this.setState({ persons })
   }
 
   indexChangeHadler = event => {
@@ -55,8 +57,8 @@ class App extends Component {
   }
 
   tooglePersonHandler = () => {
-    let switchPerson = this.state.switchPerson
-    this.setState({ switchPerson: !switchPerson })
+    let switchPerson = !this.state.switchPerson
+    this.setState({ switchPerson })
   }
 
   render() {
@@ -70,7 +72,6 @@ class App extends Component {
                 key={index}
                 name={person.name}
                 age={person.age}
-                pos={index}
                 click={this.deleteItemHandler.bind(this, index)}
               />
             )
