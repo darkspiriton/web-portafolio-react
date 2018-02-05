@@ -60,6 +60,25 @@ class App extends Component {
   }
 
   render() {
+    let persons = null
+    if (this.state.switchPerson) {
+      persons = (
+        <div>
+          {this.state.persons.map((item, index) => {
+            return (
+              <Person
+                key={index}
+                name={item.name}
+                age={item.age}
+                pos={index}
+                click={this.deleteItemHandler.bind(this, index)}
+              />
+            )
+          })}
+        </div>
+      )
+    }
+
     return (
       <div className="App">
         <Button
@@ -72,21 +91,8 @@ class App extends Component {
         <div>
           <ToggleButton toggle={this.tooglePersonHandler} />
         </div>
-        {this.state.switchPerson ? (
-          <div>
-            {this.state.persons.map((item, index) => {
-              return (
-                <Person
-                  key={index}
-                  name={item.name}
-                  age={item.age}
-                  pos={index}
-                  click={this.deleteItemHandler.bind(this, index)}
-                />
-              )
-            })}
-          </div>
-        ) : null}
+
+        {persons}
       </div>
     )
   }
