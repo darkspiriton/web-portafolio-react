@@ -4,6 +4,7 @@ import Person from './components/Person'
 import { Example } from './components/examples/Example'
 import Button from './components/Button'
 import ToggleButton from './components/ToggleButton'
+import Radium, { StyleRoot } from 'radium'
 
 class App extends Component {
   state = {
@@ -97,25 +98,27 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
-        <Button
-          restore={this.restoreNameHandler}
-          delete={this.deleteNameHandler}
-          changed={this.deleteNameHandler}
-          value={this.state.index}
-        />
-        <Example aux="male" />
-        <div>
-          <ToggleButton
-            toggle={this.tooglePersonHandler}
-            status={this.state.switchPerson}
-              />
-        </div>
+      <StyleRoot>
+        <div className="App">
+          <Button
+            restore={this.restoreNameHandler}
+            delete={this.deleteNameHandler}
+            changed={this.deleteNameHandler}
+            value={this.state.index}
+          />
+          <Example aux="male" />
+          <div>
+            <ToggleButton
+              toggle={this.tooglePersonHandler}
+              status={this.state.switchPerson}
+            />
+          </div>
 
-        {persons}
-      </div>
+          {persons}
+        </div>
+      </StyleRoot>
     )
   }
 }
 
-export default App
+export default Radium(App)
