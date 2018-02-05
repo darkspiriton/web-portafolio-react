@@ -61,8 +61,22 @@ class App extends Component {
     this.setState({ switchPerson })
   }
 
+  changeNameHandler = (event, id) => {
+    const personIndex = this.state.persons.findIndex(p => {
+      return p.id === id
+    })
+    // const person = Object.assign({}, this.state.persons)
+    const person = { ...this.state.persons[personIndex] }
+    person.name = event.target.value
+    // const persons = this.state.persons.splice(0)
+    const persons = [...this.state.persons]
+    persons[personIndex] = person
+    this.setState({ persons })
+  }
+
   render() {
     let persons = null
+
     if (this.state.switchPerson) {
       persons = (
         <div>
@@ -72,6 +86,8 @@ class App extends Component {
                 key={person.id}
                 name={person.name}
                 age={person.age}
+                value={person.name}
+                change={event => this.changeNameHandler(event, person.id)}
                 click={() => this.deleteItemHandler(index)}
               />
             )
