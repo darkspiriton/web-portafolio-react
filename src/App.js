@@ -5,6 +5,7 @@ import { Example } from './components/examples/Example'
 import Button from './components/Button'
 import ToggleButton from './components/ToggleButton'
 import Radium, { StyleRoot } from 'radium'
+import ErrorBoundary from './errotBoundary/ErrorBoundary'
 
 class App extends Component {
   state = {
@@ -83,14 +84,15 @@ class App extends Component {
         <div>
           {this.state.persons.map((person, index) => {
             return (
-              <Person
-                key={person.id}
-                name={person.name}
-                age={person.age}
-                value={person.name}
-                change={event => this.changeNameHandler(event, person.id)}
-                click={() => this.deleteItemHandler(index)}
-              />
+              <ErrorBoundary key={person.id}>
+                <Person
+                  name={person.name}
+                  age={person.age}
+                  value={person.name}
+                  change={event => this.changeNameHandler(event, person.id)}
+                  click={() => this.deleteItemHandler(index)}
+                />
+              </ErrorBoundary>
             )
           })}
         </div>
