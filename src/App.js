@@ -64,12 +64,12 @@ class App extends Component {
     if (this.state.switchPerson) {
       persons = (
         <div>
-          {this.state.persons.map((item, index) => {
+          {this.state.persons.map((person, index) => {
             return (
               <Person
                 key={index}
-                name={item.name}
-                age={item.age}
+                name={person.name}
+                age={person.age}
                 pos={index}
                 click={this.deleteItemHandler.bind(this, index)}
               />
