@@ -6,3 +6,10 @@
   width: 200px;
   padding: 20px;
 }
+
+/* Working with Media Queries import classes from '..' */
+/* @media (min-width: 500px) {
+  .person {
+    width: 450px;
+  }
+} */
