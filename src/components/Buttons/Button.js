@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../css/NameUpdate.css'
+import './NameUpdate.css'
 
 class NameUpdate extends Component {
   render() {

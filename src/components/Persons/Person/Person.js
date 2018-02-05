@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Radium from 'radium'
-import '../css/Person.css'
+import './Person.css'
 // import classes from '../css/Person.css'
 // className={classes.person}
 

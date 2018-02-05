@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import './css/App.css'
-import Person from './components/Person'
-import { Example } from './components/examples/Example'
-import Button from './components/Button'
-import ToggleButton from './components/ToggleButton'
+import './App.css'
+import Person from '../components/Persons/Person/Person'
+import { Example } from '../components/Examples/Example'
+import Button from '../components/Buttons/Button'
+import ToggleButton from '../components/Buttons/ToggleButton'
 import Radium, { StyleRoot } from 'radium'
-import ErrorBoundary from './errotBoundary/ErrorBoundary'
+import ErrorBoundary from '../components/ErrorBoundary/ErrorBoundary'
 
 class App extends Component {
   state = {
