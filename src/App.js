@@ -3,6 +3,7 @@ import './css/App.css'
 import Person from './components/Person'
 import { Example } from './components/examples/Example'
 import Button from './components/Button'
+import ToggleButton from './components/ToggleButton'
 
 class App extends Component {
   state = {
@@ -14,7 +15,8 @@ class App extends Component {
       { name: 'Luis3', age: 25 },
       { name: 'Luis4', age: 26 }
     ],
-    index: ''
+    index: '',
+    switchPerson: false
   }
 
   deleteNameHandler = event => {
@@ -52,6 +54,11 @@ class App extends Component {
     })
   }
 
+  tooglePersonHandler = () => {
+    let switchPerson = this.state.switchPerson
+    this.setState({ switchPerson: !switchPerson })
+  }
+
   render() {
     return (
       <div className="App">
@@ -62,17 +69,24 @@ class App extends Component {
           value={this.state.index}
         />
         <Example aux="male" />
-        {this.state.persons.map((item, index) => {
-          return (
-            <Person
-              key={index}
-              name={item.name}
-              age={item.age}
-              pos={index}
-              click={this.deleteItemHandler.bind(this, index)}
-            />
-          )
-        })}
+        <div>
+          <ToggleButton toggle={this.tooglePersonHandler} />
+        </div>
+        {this.state.switchPerson ? (
+          <div>
+            {this.state.persons.map((item, index) => {
+              return (
+                <Person
+                  key={index}
+                  name={item.name}
+                  age={item.age}
+                  pos={index}
+                  click={this.deleteItemHandler.bind(this, index)}
+                />
+              )
+            })}
+          </div>
+        ) : null}
       </div>
     )
   }
