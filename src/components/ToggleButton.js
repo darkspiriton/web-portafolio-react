@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Radium from 'radium'
 
 class ToggleButton extends Component {
   render() {
@@ -7,11 +8,19 @@ class ToggleButton extends Component {
       color: 'white',
       font: 'inherit',
       border: '1x solid blue',
-      padding: '8px'
+      padding: '8px',
+      ':hover': {
+        backgroundColor: 'lightgreen',
+        color: 'black'
+      }
     }
 
     if (this.props.status) {
       style.backgroundColor = 'red'
+      style[':hover'] = {
+        backgroundColor: 'salmon',
+        color: 'black'
+      }
     }
 
     return (
@@ -22,4 +31,4 @@ class ToggleButton extends Component {
   }
 }
 
-export default ToggleButton
+export default Radium(ToggleButton)
