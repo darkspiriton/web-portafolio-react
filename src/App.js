@@ -106,7 +106,10 @@ class App extends Component {
         />
         <Example aux="male" />
         <div>
-          <ToggleButton toggle={this.tooglePersonHandler} />
+          <ToggleButton
+            toggle={this.tooglePersonHandler}
+            status={this.state.switchPerson}
+              />
         </div>
 
         {persons}
