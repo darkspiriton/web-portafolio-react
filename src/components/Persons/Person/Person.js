@@ -5,7 +5,7 @@ import './Person.css'
 // className={classes.person}
 
 class Person extends Component {
-  render() {
+  render () {
     const style = {
       '@media (min-width: 500px)': { width: '450px' }
     }
@@ -22,7 +22,7 @@ class Person extends Component {
         <input
           type="text"
           value={this.props.value}
-          onChange={this.props.change}
+          onChange={this.props.changed}
         />
       </div>
     )

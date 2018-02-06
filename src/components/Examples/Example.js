@@ -1,6 +1,6 @@
 import React from 'react'
 
-function formatName(user) {
+function formatName (user) {
   return 'Sr.' + user.name
 }
 

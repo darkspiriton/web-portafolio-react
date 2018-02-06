@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
 import './App.css'
-import Person from '../components/Persons/Person/Person'
-import { Example } from '../components/Examples/Example'
-import Button from '../components/Buttons/Button'
-import ToggleButton from '../components/Buttons/ToggleButton'
 import Radium, { StyleRoot } from 'radium'
-import ErrorBoundary from '../components/ErrorBoundary/ErrorBoundary'
+import Persons from '../components/Persons/Persons'
+import Cockpit from '../components/Cockpit/Cockpit'
 
 class App extends Component {
   state = {
@@ -76,50 +73,27 @@ class App extends Component {
     this.setState({ persons })
   }
 
-  render() {
+  render () {
     let persons = null
 
     if (this.state.switchPerson) {
       persons = (
-        <div>
-          {this.state.persons.map((person, index) => {
-            return (
-              <ErrorBoundary key={person.id}>
-                <Person
-                  name={person.name}
-                  age={person.age}
-                  value={person.name}
-                  change={event => this.changeNameHandler(event, person.id)}
-                  click={() => this.deleteItemHandler(index)}
-                />
-              </ErrorBoundary>
-            )
-          })}
-        </div>
+        <Persons
+          persons={this.state.persons}
+          changed={this.changeNameHandler}
+          clicked={this.deleteItemHandler}
+        />
       )
     }
 
-    return (
-      <StyleRoot>
-        <div className="App">
-          <Button
-            restore={this.restoreNameHandler}
-            delete={this.deleteNameHandler}
-            changed={this.deleteNameHandler}
-            value={this.state.index}
-          />
-          <Example aux="male" />
-          <div>
-            <ToggleButton
-              toggle={this.tooglePersonHandler}
-              status={this.state.switchPerson}
-            />
-          </div>
-
-          {persons}
-        </div>
-      </StyleRoot>
-    )
+    return <StyleRoot>
+      <div className="App">
+        <Cockpit
+          clicked={this.tooglePersonHandler}
+          show={this.state.switchPerson} />
+        {persons}
+      </div>
+    </StyleRoot>
   }
 }
 
