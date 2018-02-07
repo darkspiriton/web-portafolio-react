@@ -4,6 +4,7 @@ import Person from './Person/Person'
 const persons = props => props.persons.map((person, index) => {
   return (
     <Person
+      key={index}
       name={person.name}
       age={person.age}
       value={person.name}
