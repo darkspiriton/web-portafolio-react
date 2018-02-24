@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './NameUpdate.css'
 
 class NameUpdate extends Component {
-  render() {
+  render () {
     const style = {
       backgroundColor: 'white',
       font: 'inherit',

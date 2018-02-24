@@ -1,5 +1,6 @@
 import React from 'react'
-import {BrowserRouter as Router,
+import {
+  BrowserRouter as Router,
   Link,
   Route
   // Redirect,
@@ -26,15 +27,15 @@ const Static = () => (
           </li>
         </ul>
       </nav>
-      <hr/>
-      <Route path="/acerca" component={Home} />
+      <hr />
+      <Route path="/acerca" component={Acerca} />
       <Route path="/servicios" component={Service} />
       <Route path="/contacto" component={Contact} />
     </div>
   </Router>
 )
 
-const Home = () => (
+const Acerca = () => (
   <div>
     <h2>Acerca</h2>
   </div>
@@ -46,9 +47,13 @@ const Service = () => (
   </div>
 )
 
-const Contact = () => (
+const Contact = ({ match }) => (
   <div>
-    <h2>Contacto</h2>
+    <Route
+      exact
+      path={match.url}
+      render={() => <h3> Mantente en contacto CONMIGO</h3>}
+    />
   </div>
 )
 
