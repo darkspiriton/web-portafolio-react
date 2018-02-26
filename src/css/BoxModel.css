@@ -1,1 +1,100 @@
 /* Selectores agrupados */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.alter,
+.main {
+  background: yellow;
+}
+.main {
+  color: green;
+}
+
+.alter {
+  color: red;
+}
+
+/* View port */
+.box {
+  /* display: inline-block; */
+  margin-bottom: 200px;
+}
+
+.box2 {
+  margin-top: 100px;
+}
+
+.box .title,
+.box2 .title {
+  border: black solid 1px;
+  background: steelblue;
+  /* height: 100px; */
+  /* width: 300px; */
+}
+
+.box2 .title {
+  margin-top: 200px;
+}
+
+.box a,
+.box2 a {
+  display: inline-block;
+  border: black solid 1px;
+  padding: 10px;
+  margin: 20px;
+  background: tomato;
+  height: 50px;
+}
+
+.caja {
+  width: 300px;
+  height: 200px;
+  border: 10px solid green;
+  /* border-width: 10px 100px; */
+  /* border-color: black yellow; */
+  /* border-radius: 500px 200px / 100px; */
+  border-radius: 50px;
+  /* border-top-left-radius: 500px 100px; */
+  color: red;
+  padding: 10px;
+  margin: 5em auto;
+  /* border-top: 10px solid black; */
+}
+
+.main-background {
+  display: none;
+  padding: 50px;
+  border: 5px solid red;
+}
+
+.background {
+  display: block;
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+  /* border-radius: 50px; */
+  padding: 50px;
+  background:
+  url(https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg),
+  url(https://morenodev.com/static/assets/images/me.jpg),
+  yellow;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 10px dotted red;
+  background-position: bottom right, top left;
+  background-size: 10%, cover;
+  background-clip: content-box;
+  background-origin: content-box;
+}
+
+.gear {
+  height: 200px;
+  width: 200px;
+  border: 20px dotted red;
+  border-radius:50%;
+  background: gray;
+  background-clip: padding-box;
+}
