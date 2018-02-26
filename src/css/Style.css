@@ -1,3 +1,171 @@
-.titulo {
+/* .titulo {
+  color: green;
+  font-size: 60px;
+  font-family: 'Lobster', cursive;
+  line-height: 0;
+  font-weight: normal;
+  margin: 0;
+} */
+
+h1 {
+  font-family: Lobster;
+  color: green;
+}
+
+li {
+  --font: Lobster;
+  background: aquamarine;
+}
+
+.test2 {
+  background: red;
+}
+
+.yellow {
+  background: yellow;
+}
+
+.pink {
+  background: pink;
+}
+ul span {
+  background: orange;
+}
+
+/* Selector hermano */
+h2 + p {
+  /* background: maroon; */
+}
+
+
+/* Selector hermanos */
+h2 ~ p {
+  background: maroon;
+}
+
+/* p.first.title.two {
+  background: lime;
+} */
+
+/* Selectores de atributos */
+[title^="Go"]{
+  color: orange;
+  font-family: Lobster;
+  font-size: 2em;
+}
+
+/* Comodin para termina en $ */
+[href$="k.com"]{
   color: red;
+  font-size: 3em;
+}
+
+/* Comodin * contiene* */
+/* i case insensitive */
+[href*='w.g' i]{
+  color: mediumvioletred;
+}
+
+/* Pseudo Clases */
+/* Son selectores dinamicos */
+
+/* Enlaces */
+a.link {
+  display: inline-block;
+  background: red;
+  color: #fff;
+  line-height: 2.5;
+  text-decoration: none;
+  padding: 0 1em;
+}
+
+a.link:hover {
+  background: darkred;
+}
+
+a.link:active {
+  transform: scale(0.9);
+}
+
+a.link:visited {
+
+}
+
+a.link:target {
+
+}
+
+:root {
+
+}
+
+:empty {
+
+}
+
+p:not(:empty) {
+  background: darkorange;
+}
+
+/* Pseudoclasses de formularios */
+input:focus {
+  background: darkred;
+}
+
+input:disabled {
+  background: grey;
+}
+
+.elegir:checked + label {
+  font-size: 2em;
+}
+
+form :optional {
+  border: 1px solid green;
+}
+
+form :required {
+  border: 1px solid red;
+}
+
+input:valid {
+  background: lightgreen;
+}
+
+input:invalid {
+  background: lightcoral;
+}
+
+
+input:in-range {
+  background: pink;
+}
+
+input:out-of-range {
+  background: red;
+}
+
+/* Pseudoclasses child */
+span:first-child {
+  background: green;
+}
+
+/* p:nth-child(odd) {
+  background: firebrick;
+  color: #fff;
+} */
+
+p:nth-last-child(3n) {
+  background: firebrick;
+  color: #fff;
+}
+
+/* p:only-child {
+  background: dodgerblue;
+  color: #fff;
+} */
+
+.parrafo:nth-last-of-type(5 ) {
+  background: black;
+  color: white;
 }
