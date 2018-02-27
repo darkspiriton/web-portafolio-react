@@ -41,6 +41,17 @@ class BoxModel extends Component {
 
         </div>
 
+        <h1 className="time"> test </h1>
+        <a href="#.pdf" className="link">Descargar pdf</a>
+        <a href="#.txt" className="link">Descargar txt</a>
+
+      <article>
+        <h1>Mi mascota</h1>
+        <img class="img" src="http://www.mundo-animal.com/blog/wp-content/plugins/special-recent-posts/cache/srpthumb-p3020-200x200-no.jpg" alt=""/>
+        <p>Lorem ipsum dolor sit amet consectetur adi</p>
+
+      </article>
+      <h2>Noticias de esta semanana en devfront</h2>
       </div>
     )
   }
