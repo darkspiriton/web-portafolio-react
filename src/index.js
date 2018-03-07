@@ -6,10 +6,14 @@ import './index.css'
 // import Style from './containers/Style.js'
 // import BoxModel from './containers/BoxModel.js'
 // import Position from './containers/Position.js'
-import Flex from './containers/Flex'
+// import Flex from './containers/Flex'
+import Grid from './containers/Grid'
+// import LayoutFlex from './containers/LayoutFlex'
 import registerServiceWorker from './registerServiceWorker'
 
-ReactDOM.render(<Flex />, document.getElementById('root'))
+// ReactDOM.render(<Flex />, document.getElementById('root'))
+// ReactDOM.render(<LayoutFlex />, document.getElementById('root') )
+ReactDOM.render(<Grid />, document.getElementById('root'))
 // ReactDOM.render(<Position />, document.getElementById('root'))
 // ReactDOM.render(<BoxModel />, document.getElementById('root'))
 // ReactDOM.render(<Style />, document.getElementById('root'))
