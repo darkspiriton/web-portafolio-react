@@ -1,0 +1,105 @@
+/* Selector de etiqueta */
+h1 {
+  /* color: green; */
+  font-size: 1em;
+}
+
+/* Selector de clase */
+.title {
+  background: hsl(0, 50%, 50%);
+}
+
+/* Selector de id */
+#id {
+  background-color: hsl(120, 50%, 50%);
+}
+
+/* Selector universal */
+.main-container * {
+  color: blue;
+}
+
+/* attributos case sensitive */
+.caseSentive {
+  color: hsl(200, 50%, 50%)
+}
+
+/* etiquetas case insensitive */
+DIV .caseSentive {
+  background-color: hsl(240, 100%, 50%)
+}
+
+/* selectores agrupados */
+.selector-group1, .selector-group2, .selector-group3 {
+  font-size: 1em;
+  color: hsl(180, 50%, 50%);
+}
+
+/* selector descendiente */
+ul li {
+  color: hsl(260, 50%, 50%);
+  font-size: 2em;
+}
+
+/* selector hijo directo */
+.item > span {
+  padding: 5px;
+  border: 1px solid hsl(80, 50%, 50%);
+  background-color: hsl(320, 50%, 50%);
+}
+
+/* selector hermanos siquientes */
+.mayor ~ .menor {
+  font-size: 0.8em;
+  color: hsl(120, 40%, 40%)
+}
+
+
+/* selector hermano siguiente */
+.mayor + .menor {
+  font-size: 1.5em;
+  color: hsl(200, 100%, 50%)
+}
+
+/* selector de atributo */
+[type="date"] {
+  display: block;
+  border: 2px solid hsl(0, 70%, 70%);
+}
+
+/* selector atributo empieza con ^*/
+[placeholder^="inpu"] {
+  border: 2px solid hsl(60, 100%, 40%);
+  color: hsl(0, 100%, 50%);
+}
+
+/* selector atributo termina con $*/
+[placeholder$="input"] {
+  border: 2px solid hsl(240, 100%, 50%);
+}
+
+/* selector atributo contiene con * */
+[placeholder*="ene-dn"] {
+  border: 2px solid hsl(260, 50%, 50%);
+}
+
+[class*="button"] {
+  /* margin-top: 20px; */
+  /* padding: 20px; */
+  text-decoration: none;
+  background-color: #fff;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.btn-orange {
+  background-color: hsl(30, 100%, 50%)
+}
+
+.btn-red {
+  background-color: hsl(0, 100%, 50%);
+}
+
+
+/* selector atributo contiene con ^*/
+
