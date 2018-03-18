@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import '../css/Normalize.css'
 import '../css/Style.css'
 
 class Style extends Component {
