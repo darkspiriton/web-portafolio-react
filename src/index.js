@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import './css/Normalize.css'
 import './index.css'
 // import App from './containers/App'
 // import StaticSite from './components/Examples/Router'
@@ -9,7 +10,8 @@ import './index.css'
 // import Flex from './containers/Flex'
 // import Grid from './containers/Grid'
 // import LayoutFlex from './containers/LayoutFlex'
-import Selector from './containers/Selector'
+// import Selector from './containers/Selector'
+import Pseudoclases from './containers/Pseudoclases'
 import registerServiceWorker from './registerServiceWorker'
 
 // ReactDOM.render(<Flex />, document.getElementById('root'))
@@ -20,5 +22,6 @@ import registerServiceWorker from './registerServiceWorker'
 // ReactDOM.render(<Style />, document.getElementById('root'))
 // ReactDOM.render(<App />, document.getElementById('root'))
 // ReactDOM.render(<StaticSite />, document.getElementById('root'))
-ReactDOM.render(<Selector />, document.getElementById('root'))
+// ReactDOM.render(<Selector />, document.getElementById('root'))
+ReactDOM.render(<Pseudoclases />, document.getElementById('root'))
 registerServiceWorker()

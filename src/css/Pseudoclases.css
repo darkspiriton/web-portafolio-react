@@ -1,0 +1,151 @@
+/* pseudoclases :root */
+:root {
+  background-color: hsl(200, 50%, 50%);
+}
+
+/* pseudoclases hover */
+/* .menu:hover {
+  background-color: #fff;
+}
+.menu:hover .menu-item{
+  color: black;
+} */
+
+/* pseudoclase hover all */
+.menu :hover {
+  color:gray;
+}
+
+/* pseudoclase :target */
+.menu {
+  display: flex;
+  position: fixed;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 100%;
+  height: 50px;;
+}
+
+.menu-item{
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  margin-right: 5px;
+}
+
+.menu-item:last-child {
+  margin-right: 0;
+}
+
+.parrafo {
+  /* margin-top: 100em; */
+  margin-bottom: 100em;
+  background: red;
+}
+
+.parrafo:target {
+  padding-top: 55px;
+}
+
+/* pseudo clase :empty */
+.parrafo:empty {
+  display: none;
+}
+
+/*pseudoclase :not(selector) */
+.parrafo:not(:empty){
+  border-bottom: 5px solid yellow;
+}
+
+/* pseudoclases formulario */
+.form-pseudoclase {
+  margin-bottom: 100em;
+  display: flex;
+  flex-direction: column;
+}
+.form-pseudoclase:target {
+  padding: 55px;
+}
+
+.form-group {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+
+label {
+  color: #fff;
+  width: 10%;
+}
+
+input[type="text"]:disabled {
+  background-color: gray;
+}
+
+input[type="text"]:enabled {
+  background-color: greenyellow;
+}
+
+input[type="radio"]:checked + label{
+  font-size: 2em;
+  background-color: yellow;
+  width: auto;
+  color: red;
+}
+
+form input[type="text"]:required {
+  background-color: red;
+}
+
+form input.input-optional:optional {
+  background-color: black;
+}
+
+form :valid {
+  background-color: green;
+}
+
+form :invalid {
+  background-color: red;
+}
+
+form :in-range {
+  background-color: yellow;
+}
+
+form :out-of-range {
+  background-color: red;
+}
+
+/*pseudoclase child */
+.form-child {
+  background: hsl(100, 10%, 70%);
+}
+
+/* first type element child */
+.form-child p:first-of-type {
+  color: white;
+}
+
+/* last type element child */
+.form-child p:last-of-type {
+  color: red;
+}
+
+/* n element type child */
+.form-child p:nth-of-type(3n) {
+  background: red;
+}
+
+/* only element type */
+.form-child div:only-of-type {
+  background: springgreen;
+}
+
+/* n element child no importa el tipo de la etiqueta */
+.form-child p:nth-child(3n) {
+  background-color: salmon;
+}
