@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import '../css/Normalize.css'
 import '../css/BoxModel.css'
 
 class BoxModel extends Component {
@@ -51,6 +52,16 @@ class BoxModel extends Component {
 
       </article>
       <h2>Noticias de esta semanana en devfront</h2>
+
+
+      <div className="background-container">
+        <h1>background</h1>
+      </div>
+
+      <div className="background-container-image">
+        <h1>Goku</h1>
+
+      </div>
       </div>
     )
   }

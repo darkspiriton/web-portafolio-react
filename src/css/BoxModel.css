@@ -165,3 +165,45 @@ article::after {
   background: yellow;
   margin: -200px;
 }
+
+h1 {
+  /* margin-top: 0px; */
+}
+
+.background-container {
+  padding-top: 0.1px;
+  background-color: green;
+  height: 500px;
+}
+
+.background-container-image {
+  padding-top: 0.1px;
+  width: 500px;
+  height: 600px;
+  margin: 100px auto;
+  border: 5px solid black;
+  padding: 50px;
+  background-clip: content-box;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-color: yellow;
+  /* background-size: contain; */
+  background-size: 200px;
+  background-position: right 50px bottom 50px;
+
+  /* background-attachment: scroll; */
+  /* box-shadow: 0 0 0px 5px blue,
+              0 0 0 20px red,
+              0 0 0 40px yellow; */
+  /* box-shadow: -10px -10px 40px rgba(0,0,0,.5) inset; */
+  box-shadow: 0 10px 40px -10px #000;
+  /* border-radius: 10%; */
+
+  /* background-color: yellow; */
+  background-image: url(https://scontent.flim9-1.fna.fbcdn.net/v/t1.0-9/18198450_1160905184021277_8186263442162500792_n.png?_nc_cat=0&oh=34e584c86ac605a0eec824d193aaaa77&oe=5B73530A);
+
+}
+
+.background-container-image h1 {
+  text-align: center;
+}
