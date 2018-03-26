@@ -1,0 +1,37 @@
+h1 {
+  background-color: red;
+  transition: background .9s 2s;
+}
+
+h1::before {
+  content: "Hola mundo";
+  color: #fff;
+  transition: color 2s;
+}
+
+h1:hover::before {
+  color: yellow;
+}
+
+h1:hover {
+  background-color: green;
+}
+
+.container {
+  position: relative;
+}
+
+.point {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 0;
+  background-color: red;
+  transition: all .5s linear;
+}
+
+.container:hover .point{
+  background-color: green;
+  /* right: 0; */
+  left: 90vw;
+}

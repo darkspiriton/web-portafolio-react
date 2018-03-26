@@ -12,7 +12,8 @@ import './index.css'
 // import LayoutFlex from './containers/LayoutFlex'
 // import Selector from './containers/Selector'
 // import Pseudoclases from './containers/Pseudoclases'
-import Animation from './containers/Animation'
+// import Animation from './containers/Animation'
+import Transition from './containers/Transition'
 import registerServiceWorker from './registerServiceWorker'
 
 // ReactDOM.render(<Flex />, document.getElementById('root'))
@@ -25,5 +26,6 @@ import registerServiceWorker from './registerServiceWorker'
 // ReactDOM.render(<StaticSite />, document.getElementById('root'))
 // ReactDOM.render(<Selector />, document.getElementById('root'))
 // ReactDOM.render(<Pseudoclases />, document.getElementById('root'))
-ReactDOM.render(<Animation />, document.getElementById('root'))
+// ReactDOM.render(<Animation />, document.getElementById('root'))
+ReactDOM.render(<Transition />, document.getElementById('root'))
 registerServiceWorker()
